@@ -3,9 +3,9 @@ html, body{
 }
 
 .game{
-	display: flex;
+	display: none;
 	align-items: center;
-	justify-content: center;0
+	justify-content: center;
 	width: 100vw;
 	height: 100vh;
 }

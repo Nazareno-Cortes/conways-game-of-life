@@ -53,5 +53,12 @@ var Board = {
 	 Game.play.innerHTML = 'Stop'; // the play button changes to the stop button
 	 Game.update();
 	 Game.start();
+ }, // end of reset
+
+ dynamicBoard: function() {
+  var board = Board.getBoard();
+  var calculo = Board.rows * 26;
+  board.style.height = calculo + 'px';
+  board.style.width = calculo + 'px';
  }
 }
