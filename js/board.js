@@ -32,7 +32,6 @@ var Board = {
 			if(boardJS[i][j]){
 		 		html = html + '<li class="alive"> </li>';
 		 	} // end of if
-
 		 	else{
 		 		html = html + '<li></li>';
 		 	}
@@ -47,5 +46,12 @@ var Board = {
 		var newBoard = GameOfLife.createEmptyBoard(Board.rows, Board.columns);
 		GameOfLife.getNextStep(currentBoard, newBoard);
 		Board.updateCells(newBoard);
-	}
+	}, // end to nextStep
+
+	reset: function() {
+	 Board.createCells();
+	 Game.play.innerHTML = 'Stop'; // the play button changes to the stop button
+	 Game.update();
+	 Game.start();
+ }
 }

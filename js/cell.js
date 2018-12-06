@@ -4,9 +4,8 @@ var Cell = {
 		if(cell.className === 'alive'){
 			cell.className = '';
 		}
-
 		else {
 			cell.className = 'alive';
 		}
-	} //end to toggle
+	} // end to toggle
 }

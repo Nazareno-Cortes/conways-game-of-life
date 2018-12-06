@@ -9,7 +9,6 @@ var GameOfLife = {
 			newBoard.push(row);
 		} //end of for
 		return newBoard;
-
 	},
 
 	getBoardFromHTML: function (cells, cols) {
@@ -51,7 +50,7 @@ var GameOfLife = {
 		if(board[posX+1] && board[posX+1][posY-1]) ++count;
 		if(board[posX+1] && board[posX+1][posY]) ++count;
 		if(board[posX+1] && board[posX+1][posY+1]) ++count;
-		var rule1 = !cell && count >= 3;
+		var rule1 = !cell && count === 3;
 		var rule2 = cell && (count === 2 || count === 3);
 		return rule1 || rule2;
 	}
