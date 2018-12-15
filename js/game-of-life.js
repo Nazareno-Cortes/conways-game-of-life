@@ -36,7 +36,6 @@ var GameOfLife = {
 				}
 			}
 		}
-		return b;
 	},
 
 	applyRule: function (board, posX, posY) {

@@ -7,8 +7,8 @@ var Modal = {
     return document.getElementById('configuration');
   },
 
-  getStart: function() {
-    return document.getElementById('start');
+  getAccept: function() {
+    return document.getElementById('accept');
   },
 
   getNumber: function() {
@@ -25,7 +25,7 @@ var Modal = {
   },
   
   begin: function() {
-    Modal.accept = Modal.getStart();
+    Modal.accept = Modal.getAccept();
     Modal.accept.onclick = Modal.setStructure;
     Modal.configurations = Modal.getConfiguration();
     Modal.configurations.onclick = Modal.showModal;
@@ -34,8 +34,8 @@ var Modal = {
 
   setStructure: function() {
     Modal.number = Modal.getNumber();
-    var onlyNumbers = Validation.onlyNumbers(Modal.number);
-    var includedNumber = Validation.includedNumber(5, 25, Modal.number);
+    var onlyNumbers = Cell_Validation.onlyNumbers(Modal.number);
+    var includedNumber = Cell_Validation.includedNumber(5, 25, Modal.number);
     
     if (onlyNumbers && includedNumber) {
       Modal.hideModal();
@@ -46,7 +46,7 @@ var Modal = {
 
     } else {
       if (document.getElementsByClassName('validation')[0] === undefined) {
-        alert('Ingrese un NUMERO entre 5 y 25');
+        alert('Enter a number between 5 and 25');
       }
     } // end to else
   } // end to setStructure
