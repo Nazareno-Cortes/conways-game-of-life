@@ -5,19 +5,29 @@ var Game = {
 	cells: null,
 	interval: null,
 	reset: null,
+
+	hiddeGame: function() {
+        document.getElementsByClassName('game')[0].style.display = 'none';
+    },
+
+    showGame: function() {
+        document.getElementsByClassName('game')[0].style.display = 'flex';
+    },
+    
 	init: function () {
 		Board.createCells();
 		Game.Board = Board.getBoard();
 		Game.cells = Board.getCells();
 		Game.next = document.getElementById('next');
 		Game.play = document.getElementById('play');
-	  Game.reset = document.getElementById('reset');
+	    Game.reset = document.getElementById('reset');
 	},
 
 	start: function () {
 		for (var i = 0; i < Game.cells.length; i++){
 			Game.cells[i].onclick = Cell.toggle;
 		}
+
 		Game.next.onclick = Board.nextStep;
 		Game.play.onclick = Game.update;
 		Game.reset.onclick = Board.reset;
@@ -27,12 +37,12 @@ var Game = {
 		if (Game.play.innerHTML === 'Play') {
 	       Game.interval = setInterval(Board.nextStep, 500);
 	       Game.play.innerHTML = 'Stop';
-				 Game.next.disabled = true;
+		   Game.next.disabled = true;
 	     }
-			 else {
+	    else {
 	       clearInterval(Game.interval);
 	       Game.play.innerHTML = 'Play';
-				 Game.next.disabled = false;
+		   Game.next.disabled = false;
 	     }
-	}
+	},
 };

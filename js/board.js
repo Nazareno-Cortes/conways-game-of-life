@@ -1,6 +1,7 @@
 var Board = {
 	rows: 5,
 	columns: 5,
+
 	getBoard: function () {
 		return document.getElementsByClassName('board')[0];
 	},
@@ -49,16 +50,16 @@ var Board = {
 	}, // end to nextStep
 
 	reset: function() {
-	 Board.createCells();
-	 Game.play.innerHTML = 'Stop'; // the play button changes to the stop button
-	 Game.update();
-	 Game.start();
- }, // end of reset
+	    Board.createCells();
+	    Game.play.innerHTML = 'Stop'; // the play button changes to the stop button
+	    Game.update();
+	    Game.start();
+    }, // end of reset
 
- dynamicBoard: function() {
-  var board = Board.getBoard();
-  var calculo = Board.rows * 26;
-  board.style.height = calculo + 'px';
-  board.style.width = calculo + 'px';
+    dynamicBoard: function() {
+        var board = Board.getBoard();
+        var calculo = Board.rows * 26;
+        board.style.height = calculo + 'px';
+        board.style.width = calculo + 'px';
  }
 }

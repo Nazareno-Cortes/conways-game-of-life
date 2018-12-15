@@ -6,6 +6,7 @@ var Play = function () {
 var init = function () {
 	Game.init();
 	Game.start();
+	Modal.begin();
 }
 
 window.onload = init;

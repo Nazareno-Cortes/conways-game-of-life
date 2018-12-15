@@ -4,21 +4,35 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/modal-window.css">
 	<script type="text/JavaScript" src="js/game-of-life.js"></script>
 	<script type="text/JavaScript" src="js/cell.js"></script>
 	<script type="text/JavaScript" src="js/board.js"></script>
 	<script type="text/JavaScript" src="js/game.js"></script>
 	<script type="text/JavaScript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/modal-window.js"></script>
 	<title>Conways Game Of Life<</title>
 </head>
 <body>
 	<div class="game">
 		<ul class="board">
-
 		</ul>
 		<button id="play" type="button" name="play">Play</button>
 		<button id="next" type="button" name="next">Next</button>
 		<button id="reset" type="button" name="reset">Reset</button>
+		<button id="configuration" type="button" name="configuration">Configuration</button>
 	</div>
+    <div class="modalwindow">
+    <div class="content">
+        <form class="form" method="post">
+          <legend>Conways Game Of Life</legend>
+          <div class="formCells">
+            <label for="cells">Number of cells</label>
+            <input id="cellnumber" type="text" name="cells" value="0"/>
+          </div>
+          <input id="start" type="button" value="Accept"/>
+        </form>
+    </div>
+  </div>
 </body>
 </html>
