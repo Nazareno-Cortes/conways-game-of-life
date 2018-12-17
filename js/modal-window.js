@@ -1,6 +1,7 @@
 var Modal = {
   accept: null,
   configurations: null,
+  cancel: null,
   number: 0,
 
   getConfiguration: function () {
@@ -15,8 +16,13 @@ var Modal = {
     return document.getElementById('cellnumber').value;
   },
 
+  getCancel: function() {
+    return document.getElementById('cancel');
+  },
+
   hideModal: function() {
     document.getElementsByClassName('modalwindow')[0].style.display = 'none';
+    Game.showGame();
   },
 
   showModal: function() {
@@ -29,6 +35,8 @@ var Modal = {
     Modal.accept.onclick = Modal.setStructure;
     Modal.configurations = Modal.getConfiguration();
     Modal.configurations.onclick = Modal.showModal;
+    Modal.cancel = Modal.getCancel();
+    Modal.cancel.onclick= Modal.hideModal;
     Modal.hideModal();
   },
 

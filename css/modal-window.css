@@ -63,3 +63,14 @@ input[type='button'] {
   margin: .5em 4em .5em 0;
   padding: 20px;
 }
+
+input[type='submit'] {
+  font-size: 1.6em;
+  margin: .5em 4em .5em 0;
+  padding: 20px;
+  position: relative;
+  float: right;
+}
+
+
+
