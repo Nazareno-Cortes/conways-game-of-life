@@ -1,4 +1,4 @@
-.mainScreen {
+.modalwindow {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
@@ -10,7 +10,7 @@
   overflow: auto;
 }
 
-.mainScreen .content {
+.modalwindow .content {
   position: relative;
   margin: auto;
   padding: 20px;

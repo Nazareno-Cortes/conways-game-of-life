@@ -15,7 +15,9 @@ var Game = {
     },
     
 	init: function () {
+		Game.showGame();
 		Board.createCells();
+		Board.dynamicBoard();
 		Game.Board = Board.getBoard();
 		Game.cells = Board.getCells();
 		Game.next = document.getElementById('next');
@@ -43,6 +45,6 @@ var Game = {
 	       clearInterval(Game.interval);
 	       Game.play.innerHTML = 'Play';
 		   Game.next.disabled = false;
-	     }
-	},
+	     } // end to else
+	} // end of update 
 };

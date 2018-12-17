@@ -43,6 +43,7 @@ var Modal = {
       Board.columns = Modal.number;
       Game.init();
       Game.start();
+      Game.showGame();
 
     } else {
       if (document.getElementsByClassName('validation')[0] === undefined) {

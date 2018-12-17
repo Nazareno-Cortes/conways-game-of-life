@@ -11,6 +11,13 @@ var Board = {
 		return board.getElementsByTagName('li');
 	},
 
+    dynamicBoard: function() {
+        var board = Board.getBoard();
+        var calculo = Board.rows * 26;
+        board.style.height = calculo + 'px';
+        board.style.width = calculo + 'px';
+    },
+
 	getliAlivesCells: function () {
 		return document.getElementsByClassName('alive');
 	},
@@ -54,12 +61,5 @@ var Board = {
 	    Game.play.innerHTML = 'Stop'; // the play button changes to the stop button
 	    Game.update();
 	    Game.start();
-    }, // end of reset
-
-    dynamicBoard: function() {
-        var board = Board.getBoard();
-        var calculo = Board.rows * 26;
-        board.style.height = calculo + 'px';
-        board.style.width = calculo + 'px';
- }
+ }// end of resert
 }
