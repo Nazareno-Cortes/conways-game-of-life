@@ -29,7 +29,6 @@ var Game = {
 		for (var i = 0; i < Game.cells.length; i++){
 			Game.cells[i].onclick = Cell.toggle;
 		}
-
 		Game.next.onclick = Board.nextStep;
 		Game.play.onclick = Game.update;
 		Game.reset.onclick = Board.reset;
@@ -40,11 +39,11 @@ var Game = {
 	       Game.interval = setInterval(Board.nextStep, 500);
 	       Game.play.innerHTML = 'Stop';
 		   Game.next.disabled = true;
-	     }
+	    }
 	    else {
 	       clearInterval(Game.interval);
 	       Game.play.innerHTML = 'Play';
 		   Game.next.disabled = false;
-	     } // end to else
+	    } // end to else
 	} // end of update 
 };
