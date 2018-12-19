@@ -1,5 +1,5 @@
 html, body{
-  background-color: #333;
+  background-color: #614dff
 }
 
 .game{
@@ -12,11 +12,11 @@ html, body{
 
 .board{
   display: flex;
-  background-color: #ccc;
+  flex-wrap: wrap;
   border: 2px solid #999;
   width: 180px;
   height: 180px;
-  flex-wrap: wrap;
+  background-color: #7f7fd1; 
 }
 
 .board li{
@@ -33,5 +33,21 @@ html, body{
 }
 
 button{
-	margin: 5px;
+	margin: 6px;
+  background-color: #7f7fd1; 
+  border-radius: 20px;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 6px 24px;
+  width: auto;
+  cursor: pointer;
 }
+
+h1{
+  font: normal 5em arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  margin: 2px;
+  display: block;
+}
+

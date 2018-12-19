@@ -1,4 +1,4 @@
-.modalwindow {
+.modalwindow{
   display: flex;
   flex-wrap: wrap;
   position: fixed;
@@ -11,7 +11,7 @@
   background-color: #614dff; 
 }
 
-.modalwindow .content {
+.modalwindow .content{
   position: relative;
   margin: auto;
   padding: 20px;
@@ -22,21 +22,21 @@
   background-color: #7f7fd1; 
 }
 
-legend {
+legend{
   font: normal 4em arial, sans-serif;
   text-align: center;
   margin: 50px;
   border-bottom: 0px solid rgb(61, 122, 64);
 }
 
-form div {
+form div{
   border-bottom: 0px solid rgb(94, 94, 94);
   height: 125px;
   text-align: center;
   padding: 20px;
 }
 
-label {
+label{
   font: normal 2em arial, sans-serif;
   display: block;
 }
@@ -48,11 +48,11 @@ input[type='text'] {
   border: 1px solid #000;
 }
 
-input[type='text']:hover, input[type='text']:focus {
+input[type='text']:hover, input[type='text']:focus{
   outline: none;
 }
 
-input[type='text'] {
+input[type='text']{
   display: inline;
   position: relative;
   top: 0;
@@ -66,7 +66,7 @@ input[type='text'] {
   padding: 20px;
 }
 
-#cancel {
+#cancel{
   font-size: 1.6em;
   margin: .5em 4em .5em 0;
   padding: 20px;
